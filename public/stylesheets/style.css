@@ -43,7 +43,11 @@
   .header__container .weird-pattern {
     position: absolute;
     left: 0;
-    top: 10vh; }
+    top: 15vh; }
+  .header__container .weird-pattern-right {
+    top: 0;
+    right: 0;
+    position: absolute; }
   .header__container--bg {
     z-index: -1;
     position: absolute;
