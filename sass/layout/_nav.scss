@@ -1,0 +1,39 @@
+.nav__container {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+	box-shadow: 0 2px 2px #eee;
+	min-height: 4rem;
+	width: 100%;
+	&--left {
+	}
+	&--right {
+		display: grid;
+		grid-template-columns: repeat(4, 1fr);
+		grid-template-rows: 1fr;
+		justify-items: center;
+		align-content: center;
+		gap: 1rem;
+		& a {
+			text-transform: uppercase;
+			padding: 0.5rem 1rem;
+			color: $grayish-blue;
+			transition: all 0.3s ease-in-out;
+			&:hover {
+				cursor: pointer;
+				color: #222;
+			}
+		}
+		& a:last-child {
+			color: #222;
+			border: 1px solid #666;
+			transition: all 0.3s ease-in-out;
+			&:hover {
+				cursor: pointer;
+				color: #fff;
+				background: #222;
+			}
+		}
+	}
+}

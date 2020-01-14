@@ -1,0 +1,83 @@
+.header__container {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+	position: relative;
+	z-index: 1;
+	width: 100%;
+    max-width: 1446px;
+    & .weird-pattern{
+        position:absolute;
+        left:0;
+        top:10vh;
+    }
+	&--bg {
+		z-index: -1;
+		position: absolute;
+		top: 0;
+		left: 0;
+		height: 50vh;
+		background: $dark-violet;
+		display: flex;
+		width: 100%;
+	}
+	&--inner {
+		display: flex;
+		flex-direction: row;
+		justify-content: center;
+		width: 100%;
+		margin: 6rem;
+		background: transparent;
+		&--left {
+			display: flex;
+			flex-direction: column;
+			margin: 0 1rem;
+			&--heading {
+				display: flex;
+				flex-direction: column;
+				justify-content: center;
+				& hr {
+					width: 7rem;
+					height: 0.2rem;
+					display: block;
+					background: #fff;
+					align-self: flex-start;
+					margin: 0;
+				}
+			}
+			& h1 {
+				font-size: 4rem;
+				color: #fff;
+				position: relative;
+				margin: 0;
+			}
+
+			&--text {
+				& p {
+					color: #fff;
+					max-width: 25rem;
+				}
+			}
+			& button {
+				color: #fff;
+				border: 1px solid #fff;
+				background: transparent;
+				transition: all 0.3s ease-in-out;
+				padding: 0.5rem 1rem;
+				max-width: 8rem;
+				&:hover {
+					cursor: pointer;
+					color: $dark-violet;
+					background: #fff;
+				}
+			}
+		}
+		&--right {
+			margin: 0 1rem;
+			& img {
+				max-width: 25rem;
+			}
+		}
+	}
+}
