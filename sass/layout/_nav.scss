@@ -1,13 +1,14 @@
 .nav__container {
 	display: flex;
 	flex-direction: row;
-	justify-content: space-between;
+	justify-content: space-around;
 	align-items: center;
-	box-shadow: 0 2px 2px #eee;
+	background: #fff;
 	min-height: 4rem;
 	width: 100%;
-	&--left {
-	}
+	position: relative;
+	z-index: 99999;
+
 	&--right {
 		display: grid;
 		grid-template-columns: repeat(4, 1fr);

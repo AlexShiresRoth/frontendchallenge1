@@ -1,0 +1,32 @@
+.footer__container{
+    width:100%;
+    display:flex;
+    flex-direction:row;
+    justify-content:center;
+    background:#f3f3f3;
+    &--inner{
+        width:75%;
+        max-width:75%;
+        display:flex;
+        flex-direction:column;
+        &--brand-section{
+            display:flex;
+            flex-direction:row;
+            justify-content: space-between;
+            align-items:center;
+            padding:2rem 0;
+            border-bottom: 1px solid darken(#f3f3f3,5%);
+            & svg:first-child{
+                fill:#222;
+                stroke: #222;
+            }
+            &--social{
+                fill: $dark-grayish-violet;
+                stroke: $dark-grayish-violet;
+                display:grid;
+                grid-template-columns: repeat(4,1fr);
+                gap: 1rem;
+            }
+        }
+    }
+}

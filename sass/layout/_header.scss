@@ -7,44 +7,46 @@
 	z-index: 1;
 	width: 100%;
 	max-width: 1446px;
-	& .weird-pattern {
+	& .weird-pattern-left {
 		position: absolute;
 		left: 0;
-		top: 15vh;
+		top: 40vh;
 	}
-	& .weird-pattern-right{
-		top:0;
-		right:0;
-		position:absolute;
+	& .weird-pattern-right {
+		top: -15vh;
+		right: 0;
+		position: absolute;
 	}
 	&--bg {
 		z-index: -1;
 		position: absolute;
 		top: 0;
 		left: 0;
-		height: 50vh;
+		height: 60vh;
 		background: $dark-violet;
 		display: flex;
 		width: 100%;
 	}
 	&--inner {
-		display: flex;
-		flex-direction: row;
-		justify-content: center;
-		width: 100%;
-		margin: 6rem;
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		justify-items: center;
+		width: 75%;
+		max-width: 75%;
+		margin: 4rem 0;
 		background: transparent;
 		&--left {
 			display: flex;
 			flex-direction: column;
-			margin: 0 1rem;
+			width: 100%;
 			&--heading {
 				display: flex;
 				flex-direction: column;
 				justify-content: center;
 				& hr {
+					border: 0px;
 					width: 7rem;
-					height: 0.2rem;
+					height: 1px;
 					display: block;
 					background: #fff;
 					align-self: flex-start;
@@ -52,7 +54,6 @@
 				}
 			}
 			& h1 {
-				font-size: 4rem;
 				color: #fff;
 				position: relative;
 				margin: 0;
@@ -71,6 +72,7 @@
 				transition: all 0.3s ease-in-out;
 				padding: 0.5rem 1rem;
 				max-width: 8rem;
+				text-transform: uppercase;
 				&:hover {
 					cursor: pointer;
 					color: $dark-violet;
@@ -79,10 +81,7 @@
 			}
 		}
 		&--right {
-			margin: 0 1rem;
-			& img {
-				max-width: 25rem;
-			}
+			width: 100%;
 		}
 	}
 }
