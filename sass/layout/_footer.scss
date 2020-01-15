@@ -1,32 +1,65 @@
-.footer__container{
-    width:100%;
-    display:flex;
-    flex-direction:row;
-    justify-content:center;
-    background:#f3f3f3;
-    &--inner{
-        width:75%;
-        max-width:75%;
-        display:flex;
-        flex-direction:column;
-        &--brand-section{
-            display:flex;
-            flex-direction:row;
-            justify-content: space-between;
-            align-items:center;
-            padding:2rem 0;
-            border-bottom: 1px solid darken(#f3f3f3,5%);
-            & svg:first-child{
-                fill:#222;
-                stroke: #222;
-            }
-            &--social{
-                fill: $dark-grayish-violet;
-                stroke: $dark-grayish-violet;
-                display:grid;
-                grid-template-columns: repeat(4,1fr);
-                gap: 1rem;
-            }
-        }
+.footer__container {
+	width: 100%;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+    background: #f3f3f3;
+    position:relative;
+    &--pattern {
+        position:absolute;
+        top:0;
+        left:0;
+        z-index:0;
     }
+	&--inner {
+        z-index:1;
+		width: 75%;
+		max-width: 75%;
+		display: flex;
+		flex-direction: column;
+		&--brand-section {
+			display: flex;
+			flex-direction: row;
+			justify-content: space-between;
+			align-items: center;
+			padding: 2rem 0;
+			border-bottom: 1px solid darken(#f3f3f3, 5%);
+
+			&--social {
+				display: grid;
+				grid-template-columns: repeat(4, 1fr);
+				gap: 1rem;
+				& svg {
+					fill: $dark-grayish-violet;
+					stroke: $dark-grayish-violet;
+					transition: all 0.3s ease-in-out;
+					&:hover {
+						cursor: pointer;
+						fill: $dark-violet;
+						stroke: $dark-violet;
+					}
+				}
+			}
+		}
+		&--grid {
+			display: grid;
+			grid-template-columns: repeat(4, 1fr);
+			gap: 1rem;
+			&--column {
+				& ul {
+					display: flex;
+					flex-direction: column;
+					padding: 0;
+					& li {
+						list-style: none;
+						text-transform: uppercase;
+					}
+					& li:first-child {
+						color: $grayish-blue;
+						margin: 1rem 0;
+					}
+				}
+			}
+		}
+	}
 }

@@ -188,8 +188,15 @@
   display: flex;
   flex-direction: row;
   justify-content: center;
-  background: #f3f3f3; }
+  background: #f3f3f3;
+  position: relative; }
+  .footer__container--pattern {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 0; }
   .footer__container--inner {
+    z-index: 1;
     width: 75%;
     max-width: 75%;
     display: flex;
@@ -201,15 +208,32 @@
       align-items: center;
       padding: 2rem 0;
       border-bottom: 1px solid #e6e6e6; }
-      .footer__container--inner--brand-section svg:first-child {
-        fill: #222;
-        stroke: #222; }
       .footer__container--inner--brand-section--social {
-        fill: #837d87;
-        stroke: #837d87;
         display: grid;
         grid-template-columns: repeat(4, 1fr);
         gap: 1rem; }
+        .footer__container--inner--brand-section--social svg {
+          fill: #837d87;
+          stroke: #837d87;
+          transition: all 0.3s ease-in-out; }
+          .footer__container--inner--brand-section--social svg:hover {
+            cursor: pointer;
+            fill: #2d2640;
+            stroke: #2d2640; }
+    .footer__container--inner--grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1rem; }
+      .footer__container--inner--grid--column ul {
+        display: flex;
+        flex-direction: column;
+        padding: 0; }
+        .footer__container--inner--grid--column ul li {
+          list-style: none;
+          text-transform: uppercase; }
+        .footer__container--inner--grid--column ul li:first-child {
+          color: #95a9c6;
+          margin: 1rem 0; }
 
 html,
 body {
@@ -247,7 +271,8 @@ h3 {
   font-size: 2rem; }
 
 a,
-p {
+p,
+li {
   font-family: 'Karla';
   font-weight: 400;
   font-size: 16px;
